@@ -20,7 +20,7 @@ strScriptContents = objFile.ReadAll
 arrScriptLines = Split(strScriptContents, vbCrLf)
 Dim length
 length = UBound(Split(strScriptContents, " ")) + 1
-If length <> 394 Then
+If length <> 393 Then
     MsgBox "Unauthorised Modifications have been made to the file. PLEASE DO NOT USE THE FILE AS IT MAY CONTAIN MALICIOUS CONTENT. Error Code: " & length & ".", vbCritical + vbOKOnly, "Error"
     WScript.Quit
 End If
