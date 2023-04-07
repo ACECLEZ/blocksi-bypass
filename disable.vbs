@@ -23,3 +23,8 @@ If objFSO.FileExists(strFilePath) Then
 Else
    WScript.Echo "File not found."
 End If
+
+'=================================
+'RELEASE 
+'=================================
+Set objFSO = Nothing
