@@ -47,7 +47,7 @@ strFilePath1 = Stringone & X & Stringtwo
 strFilePath2 = Stringone & X & Stringthree
 
 '=================================
-'MAIN - DELETE BLOCKSI FILE
+'CHECK FOR VERSION EXPIRY
 '=================================
 expiryDate = CDate("2023-12-30")
 Do
