@@ -9,7 +9,7 @@ Set objFSO = CreateObject("Scripting.FileSystemObject")
 Set wshShell = CreateObject("WScript.Shell")
 
 '=================================
-'CHECK ORIGINALITY OF FILE
+'CHECK MODIFICATIONS OF FILE
 '=================================
 Dim objFSO, objFile
 Dim strScriptPath, strScriptContents, arrScriptLines
