@@ -24,7 +24,7 @@ If length <> 393 Then
     MsgBox "Unauthorised Modifications have been made to the file. PLEASE DO NOT USE THE FILE AS IT MAY CONTAIN MALICIOUS CONTENT. Error Code: " & length & ".", vbCritical + vbOKOnly, "Error"
     WScript.Quit
 End If
-If UBound(arrScriptLines) + 1 <> 102 Then
+If UBound(arrScriptLines) + 1 <> 103 Then
     MsgBox "Unauthorised Modifications have been made to the file. PLEASE DO NOT USE THE FILE AS IT MAY CONTAIN MALICIOUS CONTENT.", vbCritical + vbOKOnly, "Error"
     WScript.Quit
 End If
