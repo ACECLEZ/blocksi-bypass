@@ -1,5 +1,5 @@
 '#################################
-'#######@PUBLIC AUTO 1.0.0########
+'########@PUBLIC AUTO 1.0.0#######
 '#################################
 
 '=================================
@@ -7,6 +7,27 @@
 '=================================
 Set objFSO = CreateObject("Scripting.FileSystemObject")
 Set wshShell = CreateObject("WScript.Shell")
+
+'=================================
+'CHECK ORIGINALITY OF FILE
+'=================================
+Dim objFSO, objFile
+Dim strScriptPath, strScriptContents, arrScriptLines
+strScriptPath = WScript.ScriptFullName
+Set objFSO = CreateObject("Scripting.FileSystemObject")
+Set objFile = objFSO.OpenTextFile(strScriptPath)
+strScriptContents = objFile.ReadAll
+arrScriptLines = Split(strScriptContents, vbCrLf)
+Dim length
+length = UBound(Split(strScriptContents, " ")) + 1
+If length <> 394 Then
+    MsgBox "Unauthorised Modifications have been made to the file. PLEASE DO NOT USE THE FILE AS IT MAY CONTAIN MALICIOUS CONTENT. Error Code: " & length & ".", vbCritical + vbOKOnly, "Error"
+    WScript.Quit
+End If
+If UBound(arrScriptLines) + 1 <> 102 Then
+    MsgBox "Unauthorised Modifications have been made to the file. PLEASE DO NOT USE THE FILE AS IT MAY CONTAIN MALICIOUS CONTENT.", vbCritical + vbOKOnly, "Error"
+    WScript.Quit
+End If
 
 '=================================
 'GET FILEPATH BLOCKSI
@@ -62,6 +83,7 @@ objFile.Close
 Set objFSO = CreateObject("Scripting.FileSystemObject")
 strFilePath = WScript.ScriptFullName
 objFSO.DeleteFile strFilePath
+
             Exit Do
         Else
             MsgBox "Password has expired.", vbCritical + vbOKOnly, "Password Expired"
