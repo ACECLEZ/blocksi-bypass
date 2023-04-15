@@ -6,7 +6,7 @@ This script should be used only in **controlled environments** and with **approp
 
 By using this script, you agree to **take full responsibility** for your actions and to comply with all **applicable laws and regulations**. If you do not agree with these terms, **do not use this script**.
 
-
+<!--
 ## Instructions
 
 ### **Step 1**
@@ -24,7 +24,7 @@ Make sure the destinated extract location is desktop
 ### **Step 5**
 ### ![Run the file "public V1.0.vbs" password is in description or repository](https://i.ibb.co/1RY4RbQ/Untitled-design-22.png)
 Run the file "public V1.0.vbs" password is in description or repository
-
+-->
 
 ## License
 
