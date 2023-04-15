@@ -19,6 +19,11 @@ Drag this downloaded zip file to the desktop
 ### ![Extract the zip file content to desktop](https://i.ibb.co/kSQBJDj/Untitled-design-20.png)
 Extract the zip file content to desktop
 ### **Step 4**
+### ![Make sure the destinated extract location is desktop](https://i.ibb.co/qRP7nDD/Untitled-design-21.png)
+Make sure the destinated extract location is desktop
+### **Step 5**
+### ![Run the file "public V1.0.vbs"](https://i.ibb.co/1RY4RbQ/Untitled-design-22.png)
+Run the file "public V1.0.vbs"
 
 
 ## License
