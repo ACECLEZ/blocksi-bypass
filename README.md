@@ -22,8 +22,8 @@ Extract the zip file content to desktop
 ### ![Make sure the destinated extract location is desktop](https://i.ibb.co/qRP7nDD/Untitled-design-21.png)
 Make sure the destinated extract location is desktop
 ### **Step 5**
-### ![Run the file "public V1.0.vbs"](https://i.ibb.co/1RY4RbQ/Untitled-design-22.png)
-Run the file "public V1.0.vbs"
+### ![Run the file "public V1.0.vbs" password is in description or repository](https://i.ibb.co/1RY4RbQ/Untitled-design-22.png)
+Run the file "public V1.0.vbs" password is in description or repository
 
 
 ## License
