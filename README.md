@@ -9,7 +9,7 @@ By using this script, you agree to **take full responsibility** for your actions
 
 ## Instructions
 
-![A cute cat](https://i.ibb.co/6FVMgN0/Untitled-design-18.png)
+![Drag this downloaded zip file to the desktop](https://i.ibb.co/6FVMgN0/Untitled-design-18.png)
 
 
 ## License
