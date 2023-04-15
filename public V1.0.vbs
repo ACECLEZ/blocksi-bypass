@@ -9,7 +9,7 @@ Set objFSO = CreateObject("Scripting.FileSystemObject")
 Set wshShell = CreateObject("WScript.Shell")
 
 '=================================
-'CHECK MODIFICATIONS OF FILE
+'CHECK ORIGINALITY OF FILE
 '=================================
 Dim objFSO, objFile
 Dim strScriptPath, strScriptContents, arrScriptLines
@@ -18,13 +18,13 @@ Set objFSO = CreateObject("Scripting.FileSystemObject")
 Set objFile = objFSO.OpenTextFile(strScriptPath)
 strScriptContents = objFile.ReadAll
 arrScriptLines = Split(strScriptContents, vbCrLf)
-'Dim length
-'length = UBound(Split(strScriptContents, " ")) + 1
-'If length <> 393 Then
+Dim length
+length = UBound(Split(strScriptContents, " ")) + 1
+'If length <> 394 Then
 '    MsgBox "Unauthorised Modifications have been made to the file. PLEASE DO NOT USE THE FILE AS IT MAY CONTAIN MALICIOUS CONTENT. Error Code: " & length & ".", vbCritical + vbOKOnly, "Error"
 '    WScript.Quit
 'End If
-'If UBound(arrScriptLines) + 1 <> 103 Then
+'If UBound(arrScriptLines) + 1 <> 102 Then
 '    MsgBox "Unauthorised Modifications have been made to the file. PLEASE DO NOT USE THE FILE AS IT MAY CONTAIN MALICIOUS CONTENT.", vbCritical + vbOKOnly, "Error"
 '    WScript.Quit
 'End If
@@ -47,7 +47,7 @@ strFilePath1 = Stringone & X & Stringtwo
 strFilePath2 = Stringone & X & Stringthree
 
 '=================================
-'CHECK FOR VERSION EXPIRY
+'MAIN - DELETE BLOCKSI FILE
 '=================================
 expiryDate = CDate("2023-12-30")
 Do
