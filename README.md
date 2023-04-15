@@ -7,6 +7,11 @@ This script should be used only in **controlled environments** and with **approp
 By using this script, you agree to **take full responsibility** for your actions and to comply with all **applicable laws and regulations**. If you do not agree with these terms, **do not use this script**.
 
 
+## Instructions
+
+![A cute cat](https://ibb.co/SBWjRJw)
+
+
 ## License
 
 BSD 3-Clause License
