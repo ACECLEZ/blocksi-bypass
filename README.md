@@ -15,8 +15,10 @@ Download this folder as zip
 ### **Step 2**
 ### ![Drag this downloaded zip file to the desktop](https://i.ibb.co/6FVMgN0/Untitled-design-18.png)
 Drag this downloaded zip file to the desktop
-**Step 3**
-**Step 1**
+### **Step 3**
+### ![Extract the zip file content to desktop](https://i.ibb.co/kSQBJDj/Untitled-design-20.png)
+Extract the zip file content to desktop
+### **Step 4**
 
 
 ## License
