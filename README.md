@@ -9,7 +9,14 @@ By using this script, you agree to **take full responsibility** for your actions
 
 ## Instructions
 
+**Step 1**
+![Download this folder as zip](https://i.ibb.co/8bpZtph/Untitled-design-19.png)
+Download this folder as zip
+**Step 2**
 ![Drag this downloaded zip file to the desktop](https://i.ibb.co/6FVMgN0/Untitled-design-18.png)
+Drag this downloaded zip file to the desktop
+**Step 3**
+**Step 1**
 
 
 ## License
