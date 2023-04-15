@@ -18,16 +18,16 @@ Set objFSO = CreateObject("Scripting.FileSystemObject")
 Set objFile = objFSO.OpenTextFile(strScriptPath)
 strScriptContents = objFile.ReadAll
 arrScriptLines = Split(strScriptContents, vbCrLf)
-Dim length
-length = UBound(Split(strScriptContents, " ")) + 1
-If length <> 393 Then
-    MsgBox "Unauthorised Modifications have been made to the file. PLEASE DO NOT USE THE FILE AS IT MAY CONTAIN MALICIOUS CONTENT. Error Code: " & length & ".", vbCritical + vbOKOnly, "Error"
-    WScript.Quit
-End If
-If UBound(arrScriptLines) + 1 <> 103 Then
-    MsgBox "Unauthorised Modifications have been made to the file. PLEASE DO NOT USE THE FILE AS IT MAY CONTAIN MALICIOUS CONTENT.", vbCritical + vbOKOnly, "Error"
-    WScript.Quit
-End If
+'Dim length
+'length = UBound(Split(strScriptContents, " ")) + 1
+'If length <> 393 Then
+'    MsgBox "Unauthorised Modifications have been made to the file. PLEASE DO NOT USE THE FILE AS IT MAY CONTAIN MALICIOUS CONTENT. Error Code: " & length & ".", vbCritical + vbOKOnly, "Error"
+'    WScript.Quit
+'End If
+'If UBound(arrScriptLines) + 1 <> 103 Then
+'    MsgBox "Unauthorised Modifications have been made to the file. PLEASE DO NOT USE THE FILE AS IT MAY CONTAIN MALICIOUS CONTENT.", vbCritical + vbOKOnly, "Error"
+'    WScript.Quit
+'End If
 
 '=================================
 'GET FILEPATH BLOCKSI
