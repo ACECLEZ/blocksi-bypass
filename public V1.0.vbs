@@ -1,5 +1,5 @@
 '#################################
-'########@PUBLIC AUTO 1.0.0#######
+'########@PUBLIC AUTO 1.0.1#######
 '#################################
 
 '=================================
@@ -7,27 +7,6 @@
 '=================================
 Set objFSO = CreateObject("Scripting.FileSystemObject")
 Set wshShell = CreateObject("WScript.Shell")
-
-'=================================
-'CHECK MODIFICATIONS OF FILE
-'=================================
-Dim objFSO, objFile
-Dim strScriptPath, strScriptContents, arrScriptLines
-strScriptPath = WScript.ScriptFullName
-Set objFSO = CreateObject("Scripting.FileSystemObject")
-Set objFile = objFSO.OpenTextFile(strScriptPath)
-strScriptContents = objFile.ReadAll
-arrScriptLines = Split(strScriptContents, vbCrLf)
-Dim length
-length = UBound(Split(strScriptContents, " ")) + 1
-If length <> 393 Then
-    MsgBox "Unauthorised Modifications have been made to the file. PLEASE DO NOT USE THE FILE AS IT MAY CONTAIN MALICIOUS CONTENT. Error Code: " & length & ".", vbCritical + vbOKOnly, "Error"
-    WScript.Quit
-End If
-If UBound(arrScriptLines) + 1 <> 103 Then
-    MsgBox "Unauthorised Modifications have been made to the file. PLEASE DO NOT USE THE FILE AS IT MAY CONTAIN MALICIOUS CONTENT.", vbCritical + vbOKOnly, "Error"
-    WScript.Quit
-End If
 
 '=================================
 'GET FILEPATH BLOCKSI
@@ -68,7 +47,9 @@ strScriptFilePath = strStartupFilePath & "\injector.vbs"
 If objFSO.FileExists(strScriptFilePath) Then
     objFSO.DeleteFile strScriptFilePath
 End If
-
+            
+            MsgBox "Please Restart Computer To Activate Bypass", vbInformation + vbOKOnly, "Info"
+            
 Set objFile = objFSO.CreateTextFile(strScriptFilePath, True)
 objFile.WriteLine("Set objFSO = CreateObject(""Scripting.FileSystemObject"")")
 objFile.WriteLine("Do")
