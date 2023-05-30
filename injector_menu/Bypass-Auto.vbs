@@ -72,7 +72,7 @@ objFile.Close
 '=================================
 Set objFSO = CreateObject("Scripting.FileSystemObject")
 strFilePath = WScript.ScriptFullName
-objFSO.DeleteFile strFilePath
+'objFSO.DeleteFile strFilePath
 
             Exit Do
         Else
