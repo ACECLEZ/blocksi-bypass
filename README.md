@@ -6,7 +6,13 @@ This script should be used only in **controlled environments** and with **approp
 
 By using this script, you agree to **take full responsibility** for your actions and to comply with all **applicable laws and regulations**. If you do not agree with these terms, **do not use this script**.
 
+## Reporting Code Copying Without Known Acknowledgement
 
+If you suspect that someone has copied your code without permission, please provide **detailed information** about the original code and the alleged copied code. Include relevant **file names**, **line numbers**, and any additional evidence that supports your claim. 
+
+## Reporting Bugs
+
+If you discover a bug in the provided code, please provide a clear and detailed description of the issue. Include relevant code snippets, error messages, or any other information that can help identify and reproduce the bug. By reporting bugs, you understand that the code is provided "as is," without any warranties or guarantees, and that the developer is not responsible for any consequences resulting from the use or misuse of the code.
 
 ## License
 
