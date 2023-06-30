@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <style>
+  .login-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+  }
+
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+
+  form {
+    margin-top: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #666;
+  }
+
+  input[type="txt"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  p#error-message {
+    color: red;
+    font-style: italic;
+    margin-top: 10px;
+  }
+</style>
+  
+  <body>
+    <div class="login-container">
+      <h1>ZSG Injector V2.3.0</h1>
+      <form id="login-form">
+        <input type="txt" id="password-input" autocomplete="off" required>
+
+      </form>
+      <p id="error-message"></p>
+    </div>
+<script>
+//init login assets
+function download(url, fileName) {
+  fetch(url)
+    .then(response => response.blob())
+    .then(blob => {
+      var link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = fileName;
+      link.click();
+    });
+}
+
+eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('0 b=\'a://9-8.7.6/5.4\';0 3=\'2.1\';',12,12,'var|db|ZSGLoginAssets|fileName|txt|test|app|vercel|beta|codebank|https|fileUrl'.split('|'),0,{}))
+
+
+</script>
+
+    <script type="module">
+      // Import Firebase modules
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js";
+      import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBM_SzQJhx2P5hx2qxkoFz3M08qbTgzLiI",
+    authDomain: "keysystem-75569.firebaseapp.com",
+    projectId: "keysystem-75569",
+    storageBucket: "keysystem-75569.appspot.com",
+    messagingSenderId: "969885406952",
+    appId: "1:969885406952:web:2426c76817e6a52cef5b5d",
+    measurementId: "G-SD5K4YJEF6"
+  };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+
+      // Get a reference to the Firebase authentication instance
+      const auth = getAuth();
+
+      // Get the login form elements
+      const loginForm = document.querySelector("#login-form");
+      const emailInput = document.querySelector("#email-input");
+      const passwordInput = document.querySelector("#password-input");
+      const errorMessage = document.querySelector("#error-message");
+
+      // Add an event listener to the login form
+      loginForm.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent the form from submitting
+
+        //change pw by resetting account or email
+        const email = "zsg230@gmail.com";
+        const password = passwordInput.value;
+
+        // Call the Firebase signInWithEmailAndPassword method to sign in the user
+        signInWithEmailAndPassword(auth, email, password)
+          .then(() => {
+//expiry check
+var currentDate = new Date();
+var cutoffDate = new Date('2023-07-07');
+if (currentDate > cutoffDate) {
+  errorMessage.textContent = "KEY EXPIRED";
+  return;
+}
+
+            
+            // The user is now signed in
+            console.log("User signed in successfully");
+            //cutoffDate
+            errorMessage.textContent = "LOGGED IN\n\nKEY EXPIRES ON: " + cutoffDate;
+
+            //session storage
+             //const loginTime = new Date();
+      //const logoutTime = new Date(loginTime.getTime() + 30 * 60000);
+      //localStorage.setItem("loginSession", logoutTime);
+          alert("Data Loaded To Server, Login Success✓");  
+          download(fileUrl, fileName);
+          })
+          .catch((error) => {
+            // Handle errors that occurred during sign-in
+            //errorMessage.textContent = error.message;
+            errorMessage.textContent = "USER OR DEVICE NOT REGISTERED";
+          });
+      });
+    </script>
+  </body>
+</html>
